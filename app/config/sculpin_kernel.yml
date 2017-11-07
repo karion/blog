@@ -1,3 +1,9 @@
 sculpin_content_types:
     posts:
         permalink: blog/:year/:month/:day/:filename/
+
+    cv_elements:
+        type: path
+        path: _cv_elements
+        singular_name: cv_element
+        enabled: true

@@ -1,0 +1,22 @@
+---
+layout: default
+title: Alfa i omega
+use:
+- cv_elements
+
+---
+<h2>My CV</h2>
+{% for element in data.cv_elements %}
+
+<div>
+    <div>
+        <h3>{{ element.title }}
+            <small>{{ element.from | date("Y-m-d") }} - {{ element.to  | date("Y-m-d") }}</small>
+        </h3>
+    </div>
+    <div>
+{{ element.content |raw }}
+    </div>
+</div>
+
+{% endfor %}
