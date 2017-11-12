@@ -1,0 +1,22 @@
+footer {
+  &.container {
+    border-top: 1px solid #e0e0e0;
+    opacity: 0.5;
+    padding: 20px 0 0 20px;
+    margin-top: 30px;
+    transition: opacity 0.3s;
+
+    p {
+      margin: 0;
+    }
+
+    p.copyright {
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
