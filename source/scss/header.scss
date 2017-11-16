@@ -10,10 +10,9 @@ header {
           text-transform: lowercase;
           font-size: 30px;
           color: $accent;
-          transition: all 0.3s;
+          transition: color 0.3s;
 
           &:hover {
-            transform: scale(1.05);
             color: $accent-lighter;
           }
         }
