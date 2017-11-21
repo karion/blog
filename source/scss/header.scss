@@ -1,0 +1,101 @@
+header {
+  nav.navbar {
+    background-color: #fff;
+    background-image: none;
+
+    div.container {
+      div.navbar-header {
+        a.navbar-brand {
+          font-family: 'Grand Hotel', sans-serif;
+          text-transform: lowercase;
+          font-size: 30px;
+          color: $accent;
+          transition: all 0.3s;
+
+          &:hover {
+            transform: scale(1.05);
+            color: $accent-lighter;
+          }
+        }
+      }
+
+      nav.navbar-search {
+        form {
+          margin: 15px 0;
+
+          input {
+            background-color: #f0f0f0;
+            color: #404040;
+            font-size: 13px;
+            border: 0;
+            box-shadow: none;
+            border: 1px solid #f0f0f0;
+            border-right: 0;
+            box-sizing: border-box;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            height: 32px;
+
+            &:focus {
+              border: 1px solid #e0e0e0;
+              border-right: 0;
+            }
+          }
+
+          button {
+            height: 32px;
+            outline: none;
+            margin-left: -3px;
+            font-size: 13px;
+            background-color: $accent;
+            color: #fff;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+
+            i {
+              margin-right: 5px;
+            }
+
+            &:hover {
+              background-color: $accent-lighter;
+            }
+          }
+        }
+      }
+    }
+
+    &.navbar-menu {
+      box-shadow: 0px 5px 5px #f0f0f0;
+      top: 50px;
+
+      ul.nav {
+        li {
+          margin: 15px 10px;
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            padding: 0;
+            color: #aaa;
+            font-size: 14px;
+            font-weight: 500;
+            text-shadow: none;
+
+            &:hover {
+              background-color: transparent;
+              color: $accent;
+            }
+          }
+        }
+      }
+    }
+  }
+}

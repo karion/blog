@@ -4,7 +4,9 @@
 /app/config/sculpin_site_*.yml
 /app/logs/*
 /output_*/
+/source/css/
 /source/components/
+/node_modules/
 s3.conf
 /vendor
 /.idea/
