@@ -24,11 +24,14 @@ article {
       a {
         font-size: 36px;
         font-weight: 900;
-        transition:: color 0.3s;
+        transition: color 0.3s;
 
         &:hover {
           text-decoration: none;
+          color: #000066;
         }
+
+        color: #00008B;
       }
     }
   }
