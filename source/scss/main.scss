@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Grand+Hotel');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|PT+Serif:400i&amp;subset=latin-ext');
 
-$accent: #3d5afe;
-$accent-lighter: #5676ff;
+$accent: #00008B;
+//$accent: #3d5afe;
+//$accent-lighter: #5676ff;
+$accent-lighter: #000066;
 
 body {
   background-color: #f7f7f7;
   font-family: 'Lato', sans-serif;
-  padding-top: 120px;
+  //padding-top: 120px;
 }
 
 a {
