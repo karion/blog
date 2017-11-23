@@ -3,7 +3,7 @@ layout: default
 title: About
 
 ---
-# Trochę o mnie
+## Trochę o mnie
 
 Jestem mężem, ojcem, programistę i  katolikiem. W dowolnej kolejności, a raczej wszystko na raz.
 

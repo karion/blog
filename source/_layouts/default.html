@@ -85,13 +85,18 @@
     </header>
         <div class="mainContent container">
             <div class="row-fluid">
-                <div class="col-md-8">
+                <div class="col-md-8 white-box">
                     {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
                 </div>
 
                 <div class="col-md-4 sidebar">
                     <div class="well">
-                        <h4>{{ site.title }}{% if site.subtitle %} <small>{{ site.subtitle }}</small>{% endif %}</h4>
+                        <h4>
+                            {{ site.title }}
+                            {% if site.subtitle %}
+                                <small>{{ site.subtitle }}</small>
+                            {% endif %}
+                        </h4>
 
                         <p>
                             Some text content

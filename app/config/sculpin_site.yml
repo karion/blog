@@ -3,7 +3,9 @@
 # in a template to get the contents of the `title` key.
 title: Karion@net
 subtitle: Becouse why not
+url: http://karion.net.pl
 
 # Insert your disqus shortname
-#disqus:
-#    shortname:
+disqus:
+    shortname: "karion-net"
+

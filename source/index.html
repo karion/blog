@@ -16,7 +16,18 @@ use:
         </header>
 
         <div class="content">
-            {{ post.blocks.content|raw }}
+            {% set break_array = post.blocks.content|split('<!-- more -->', 2) %}
+
+            {{ break_array[0]|raw }}
+
+            {% if break_array|length > 1 %}
+            <p>
+                <a href="{{ site.url }}{{ post.url }}">
+                    Czytaj dalej
+                </a>
+            </p>
+            {% endif %}
+            {# post.blocks.content|raw #}
         </div>
 
         <div class="post-info">
