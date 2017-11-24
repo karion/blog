@@ -40,5 +40,8 @@
     },
     "autoload": {
         "classmap": ["component-manager.php"]
+    },
+    "require-dev": {
+        "deployer/deployer": "^6.0"
     }
 }
