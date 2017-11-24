@@ -22,6 +22,7 @@ set('allow_anonymous_stats', false);
 
 // Hosts
 set('default_stage', 'prod');
+set('bin/php', '/usr/local/php7.1/bin/php');
 
 inventory('hosts.yml');
 
