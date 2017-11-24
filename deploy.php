@@ -4,7 +4,7 @@ namespace Deployer;
 require 'recipe/common.php';
 
 // Project name
-set('application', 'my_project');
+set('application', 'blog_karion');
 
 // Project repository
 set('repository', 'git@github.com:karion/blog.git');
@@ -21,10 +21,9 @@ set('writable_dirs', []);
 set('allow_anonymous_stats', false);
 
 // Hosts
+set('default_stage', 'prod');
 
-host('project.com')
-    ->set('deploy_path', '~/{{application}}');    
-    
+inventory('hosts.yml');
 
 // Tasks
 
