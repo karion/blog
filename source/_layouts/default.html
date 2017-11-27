@@ -43,6 +43,16 @@
         /** quick fix because bootstrap <pre> has a background-color. */
         pre code { background-color: inherit; }
         </style>
+        {% if site.google_analytics_tracking_id and site.google_analytics_tracking_id != '' %}
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics_tracking_id}}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '{{site.google_analytics_tracking_id}}');
+        </script>
+        {% endif %}
         {% block head_styles %}
         {% endblock %}
         {% block head_scripts %}
