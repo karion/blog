@@ -2,6 +2,7 @@
 title: Syntax Highlighting
 categories:
     - features
+draft: true
 
 ---
 You're all programmers, right? And you're writing code snippets on your Sculpin
