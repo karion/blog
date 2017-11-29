@@ -1,5 +1,5 @@
 ---
-date: 2017-11-27 8:15
+date: 2017-11-29 8:15
 title: Mentoring
 tags: [mentoring, wprowadzenie]
 categories: [php, nauka]
@@ -17,7 +17,7 @@ To pozwoli ci poznawać nowe narzędzia lub biblioteki.
 Nie jest to wymóg, ale przecież uczysz się także by poznawać nowe rzeczy. 
 
 Poza zadaniem oferuję ci code review czyli przejrzenie twojego kodu i omówienie go z tobą. 
-Wrzuć swój kod na Github-a lub inny publicznie dostępne repozytorium i wyślij mi mail-a na [mentor@karion.net.pl]. 
+Wrzuć swój kod na Github-a lub inny publicznie dostępne repozytorium i wyślij mi mail-a na [mentor@karion.net.pl](mailto:mentor@karion.net.pl). 
 Postaram się go przejrzeć twój kod w ciągu tygodnia. 
 
 Celem takiego przejrzenia jest praca nad jakością twojego kodu. 
