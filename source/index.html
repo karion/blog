@@ -47,13 +47,13 @@ use:
     <nav class="pagination">
         {% if page.pagination.next_page %}
             <a href="{{ site.url }}{{ page.pagination.next_page.url }}">
-                <i class="ion-ios-arrow-left"></i> Older Posts
+                <i class="ion-ios-arrow-left"></i> Starsze
             </a>
         {% endif %}
-        <span>Page {{ page.pagination.page }}</span>
+        <span>Strona {{ page.pagination.page }}</span>
         {% if page.pagination.previous_page %}
             <a href="{{ site.url }}{{ page.pagination.previous_page.url }}">
-                Newer Posts <i class="ion-ios-arrow-right"></i>
+                Nowsze <i class="ion-ios-arrow-right"></i>
             </a>
         {% endif %}
     </nav>

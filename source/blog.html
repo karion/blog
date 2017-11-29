@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Posts Archive
+title: Artykuły
 generator: pagination
 use:
     - posts
 
 ---
 {% set year = '0' %}
-<h2>Posts Archive</h2>
+<article>
+<h2>Artykuły</h2>
 {% for post in page.pagination.items %}
 {% set this_year %}{{ post.date | date("Y") }}{% endset %}
 {% if year != this_year %}
@@ -24,19 +25,21 @@ use:
   </div>
 {% endfor %}
 
-<div>
+</article>
+
+
 {% if page.pagination.previous_page or page.pagination.next_page %}
-    <nav class="article clearfix">
-    {% if page.pagination.previous_page %}
-    <a class="previous" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="Previous Page">
-        <span class="title">
-            Previous Page
-        </span>
+<nav class="pagination">
+    {% if page.pagination.next_page %}
+    <a href="{{ site.url }}{{ page.pagination.next_page.url }}">
+        <i class="ion-ios-arrow-left"></i> Starsze
     </a>
     {% endif %}
-    {% if page.pagination.next_page %}
-    <a class="next" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="Next Page"><span class="title">Next Page</span></a>
+    <span>Strona {{ page.pagination.page }}</span>
+    {% if page.pagination.previous_page %}
+    <a href="{{ site.url }}{{ page.pagination.previous_page.url }}">
+        Nowsze <i class="ion-ios-arrow-right"></i>
+    </a>
     {% endif %}
-    </nav>
+</nav>
 {% endif %}
-</div>

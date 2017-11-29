@@ -4,3 +4,6 @@ sculpin_content_types:
 
 sculpin:
     ignore: ["**/*~", "scss/*"]
+
+sculpin_pagination:
+    max_per_page: 5
