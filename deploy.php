@@ -13,7 +13,7 @@ set('repository', 'git@github.com:karion/blog.git');
 set('git_tty', true); 
 
 // Shared files/dirs between deploys 
-set('shared_files', []);
+set('shared_files', ['app/config/sculpin_site_prod.yml']);
 set('shared_dirs', []);
 
 // Writable dirs by web server 
@@ -22,11 +22,15 @@ set('allow_anonymous_stats', false);
 
 // Hosts
 set('default_stage', 'prod');
-set('bin/php', '/usr/local/php7.1/bin/php');
 
 inventory('hosts.yml');
 
 // Tasks
+desc('Run sculpin for prod');
+task('deploy:sculpin', function () {
+    run('cd {{release_path}} && {{bin/php}} vendor/bin/sculpin  generate --env=prod');
+});
+
 
 desc('Deploy your project');
 task('deploy', [
@@ -41,6 +45,7 @@ task('deploy', [
     'deploy:clear_paths',
     'deploy:symlink',
     'deploy:unlock',
+    'deploy:sculpin',
     'cleanup',
     'success'
 ]);
