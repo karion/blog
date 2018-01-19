@@ -1,9 +1,8 @@
 ---
-date: 2018-01-16 12:00
+date: 2018-01-19 12:00
 title: Lista zadań - część 1 (CLI)
 tags: [mentoring, projekt, projekt_start]
 categories: [php, nauka]
-draft: true
 ---
 Proste narzędzie, które ułatwia nam planowanie pracy. Jest tysiące implementacji tej idei. 
 Czy można tu jeszcze coś wymyślić? Tylko właściwie po co? To narzędzie powinno być jak najprostsze.
