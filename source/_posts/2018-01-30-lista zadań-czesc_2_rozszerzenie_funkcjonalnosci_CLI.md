@@ -1,6 +1,6 @@
 ---
 date: 2018-01-30 12:00
-title: Lista zadań - część 2 ()rozszerzenie funkcjonalności CLI)
+title: Lista zadań - część 2 (rozszerzenie funkcjonalności CLI)
 tags: [mentoring, projekt]
 categories: [php, nauka]
 ---
