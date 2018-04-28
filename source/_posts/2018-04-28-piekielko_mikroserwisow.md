@@ -55,8 +55,61 @@ a nawet duże liczby zapytań do baz danych.
 
 ### Trochę kodu
 
+Middleware zgodny z [PSR-15](https://www.php-fig.org/psr/psr-15/):
 
-Middleware zgodny z PSR
+```php
+class RequestIdMiddleware implements \Psr\Http\Server\MiddlewareInterface
+{
+    /**
+     * @var \Psr\Container\ContainerInterface
+     */
+    private $container;
+
+    public function __construct(Psr\Container\ContainerInterface $container)
+    {
+        $this->container = $container;
+    }
+
+    public function process(
+        \Psr\Http\Message\ServerRequestInterface $request,
+        \Psr\Http\Server\RequestHandlerInterface $handler
+    ): \Psr\Http\Message\ResponseInterface {
+
+        $requestIds = $request->getHeader('request_id');
+
+        if (empty($requestIds)) {
+            $requestId = uniqid();
+        } else {
+            $requestId = current($requestIds);
+        }
+
+        $this->container->setParameter('request_id', $requestId);
+
+        return $handler->handle($request);
+    }
+}
+```
 
 Klasa dla monologa
 
+```php
+class RequestIdProcessor
+{
+    /**
+     * @var string
+     */
+    private $requestId;
+
+    public function __construct(string $requestId)
+    {
+        $this->requestId = $requestId;
+    }
+
+    public function __invoke(array $record)
+    {
+        $record['extra']['request_id'] = $this->requestId;
+
+        return $record;
+    }
+}
+```
